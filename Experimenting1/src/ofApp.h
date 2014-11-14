@@ -1,7 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-
+#include "resourceManager.h"
+#include "tile.h"
 class ofApp : public ofBaseApp{
 
 	public:
@@ -23,4 +24,9 @@ class ofApp : public ofBaseApp{
 		float cpx, cpy, cpz;//camera position
 		float x, y, height, width;//character position
 		float moveSpeed;//character move speed pix/frame
+		std::vector< std::vector<gameTile> > tiles;
+		resourceManager recManager;
+
+		int gameWidth, gameHeight;
+		int tileDim;
 };

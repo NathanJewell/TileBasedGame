@@ -1481,3 +1481,38 @@
 1415759707 c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\myapps\experimenting1\src\ofapp.h
 	"ofMain.h"
 
+1411792076 source:c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\icon.rc
+
+1411792076 source:c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\src\main.cpp
+	"ofMain.h"
+	"ofApp.h"
+
+1415854432 c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\src\ofapp.h
+	"ofMain.h"
+	"resourceManager.h"
+	"tile.h"
+
+1415899678 c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\src\resourcemanager.h
+	"ofMain.h"
+	<vector>
+	<map>
+	<string.h>
+
+1415906259 c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\src\tile.h
+	"ofMain.h"
+	"resourceManager.h"
+
+1415907715 source:c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\src\ofapp.cpp
+	"ofApp.h"
+	<iostream>
+
+1415906161 source:c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\src\resourcemanager.cpp
+	"ofMain.h"
+	"resourceManager.h"
+
+1415907733 source:c:\of_v0.8.4_win_cb_release\of_v0.8.4_win_cb_release\apps\tilebasedgame\experimenting1\src\tile.cpp
+	"ofMain.h"
+	"tile.h"
+	"resourceManager.h"
+	<iostream>
+
