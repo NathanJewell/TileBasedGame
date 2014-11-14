@@ -27,6 +27,31 @@ void ofApp::saveTiles()
     tileSave.saveFile("tileSave.xml");
 
 }
+
+void ofApp::loadTiles()
+{
+//    ofxXmlSettings tileLoad;
+//    if(tileLoad.loadFile("tileSave.xml"))
+//    {
+//        gameWidth = tileLoad.getValue("boardWidth");
+//        gameHeight = tileLoad.getValue("boardHeight");
+//        tileDimX = tileLoad.getValue("tileDimensionsX");
+//        tileDimY = tileLoad.getValue("tileDimensionsY");
+//        tileLoad.pushTag("tileArray");
+//        for(int aa = 0; aa < tiles.size(); aa++)
+//        {
+//            tileLoad.pushTag("row", aa);
+//            for(int bb =0; bb < tiles.size() bb++)
+//            {
+//                tileLoad.pushTag("tile", bb);
+//                tiles[aa][bb].textureName = tileLoad.getValue("textureName");
+//                tiles[aa][bb].setTexture(recManager, tileLoad.getValue("textureName"));
+//                tileLoad.popTag();
+//            }
+//            tileLoad.popTag();
+//        }
+//    }
+}
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetFrameRate(60);
@@ -38,7 +63,7 @@ void ofApp::setup(){
     recManager.addTexture("stone", "basicStone.png");
     recManager.addTexture("grass", "basicGrass.png");
 
-    editor.setup(tiles, recManager, tileDimX);
+
 
     for(int aa = 0; aa < gameHeight; aa++)
     {
@@ -66,11 +91,13 @@ void ofApp::setup(){
     y =100;
     height = 50;
     width = 50;
+
+    tileEditor* editor = new tileEditor(tiles, recManager, tileDimX);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    editor.update(mousePos, mouseClicked, recManager);
+    editor->update(mousePos, mouseClicked, recManager);
     cam.setPosition(x+width/2, y+height/2, cpz);
     mouseClicked = false;
 }
@@ -113,6 +140,10 @@ void ofApp::keyPressed(int key){
     {
         saveTiles();
     }
+    if(key == OF_KEY_F2)
+    {
+        //loadTile();
+    }
 }
 
 //--------------------------------------------------------------
@@ -133,7 +164,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    mouseClicked = true
+    mouseClicked = true;
 }
 
 //--------------------------------------------------------------

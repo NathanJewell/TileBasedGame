@@ -5,14 +5,14 @@
 class tileEditor
 {
 public:
+    tileEditor(std::vector<std::vector<gameTile> >& gts, resourceManager& rcM, const int& tdx);
     std::vector<std::vector<gameTile> > &tiles;
     std::vector<std::string> textures;
-    resourceManager* recMan;
+    resourceManager& recMan;
     int currentTextureIndex;
     int over, down;//current selected tile vector
     int tileDimX;
 
-    void setup(std::vector<std::vector<gameTile> >&, resourceManager&, const int&);
     void update(const ofVec2f&, const bool, resourceManager&);
     void draw();
 };

@@ -24,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
         void saveTiles();
+        void loadTiles();
 
 		ofCamera cam;
 		float cpx, cpy, cpz;//camera position
@@ -31,7 +32,7 @@ class ofApp : public ofBaseApp{
 		float moveSpeed;//character move speed pix/frame
 		std::vector< std::vector<gameTile> > tiles;
 		resourceManager recManager;
-        tileEditor editor;
+        tileEditor* editor;
 		int gameWidth, gameHeight;
 		int tileDimX, tileDimY;
 

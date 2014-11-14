@@ -1,9 +1,8 @@
 #include "tileEditor.h"
 
-void tileEditor::setup(std::vector<std::vector<gameTile> >& gts, resourceManager& recMan, const int& tdx)
+tileEditor::tileEditor(std::vector<std::vector<gameTile> >& gts, resourceManager& rcM, const int& tdx)
+:tiles(gts), recMan(rcM), tileDimX(rcM)
 {
-    tileDimX = tdx;
-    tiles = gts;
     for(int ii  = 0; ii < recMan.mappedTextures.size(); ii++)
     {
         textures.push_back(recMan.mappedTextures[ii].key_type);
